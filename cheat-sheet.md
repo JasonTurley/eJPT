@@ -5,60 +5,48 @@ pen test engagements.
 
 ## Networking
 
-### Check route
+Check routing table information
 
 ```
 $ route
-```
-### Manually add a route
-
-```
-$ ip route add 192.168.10.20/24 via 10.175.3.1
+$ ip route
 ```
 
-### Check DNS
+Add a network to current route
+
+```
+$ ip route add 192.168.10.0/24 via 10.175.3.1
+$ route add -net 192.168.10.0 netmask 255.255.255.0 gw 10.175.3.1
+```
+
+DNS
 
 ```
 $ nslookup mysite.com
+$ dig mysite.com
 ```
 
-## Information Gathering
-
-### Subdomain Enumeration
+## Subdomain Enumeration
 
 - [Sublist3r](https://github.com/aboul3la/Sublist3r)
 - [DNSdumpster](https://dnsdumpster.com/)
 
 ## Footprinting & Scanning
 
-**Check which hosts in a network are up:**
+Find live hosts with fping or nmap
 ```
 $ fping -a -g 172.16.100.40/24 2>/dev/null | tee alive_hosts.txt
+$ nmap -sn 172.16.100.40/24 -oN alive_hosts.txt
 ```
 
-**nmap stealth SYN scan:**
+nmap scan types
 ```
-$ nmap -sS target.com
-```
-
-**nmap TCP connect scan:**
-```
-$ nmap -sT target.com
-```
-
-**nmap port scan:**
-```
-$ nmap -sn target.com
-```
-
-**nmap service scan:**
-```
-$ nmap -sV target.com
-```
-
-**nmap OS detection:**
-```
-# nmap -O target.com
+-sS: TCP SYN Scan (aka Stealth Scan)
+-sT: TCP Connect Scan 
+-sU: UDP Scan
+-sn: Port Scan
+-sV: Service Version information
+-O: Operating System information
 ```
 
 ### Spotting a Firewall
@@ -86,36 +74,34 @@ Tips:
 - Use "--reason" to see why a port is marked open or closed
 - If a "RST" packet is received, then something prevented the connection - probably a firewall!
 
-### Masscan
+## Masscan
 Masscan is designed to scan thousands of IP addresses at once.
 
 
 ## Vulnerability Assessment
 
+Use the information from the Enumeration/Footprinting phases to find a vulnerable threat vector.
+
+Below are some helpful Vulnerability assessment resources:
 - Searchsploit
 - ExploitDB
 - Msfconsole search command
 - Google
 - Nessus
 
-## Web Attacks
 
-### Web Server Fingerprinting
+## Web Server Fingerprinting
 
-Use netcat for banner grabbing:
+Use netcat for HTTP banner grabbing:
 ```
 $ nc <target addr> 80
 HEAD / HTTP/1.0
-
-
 ```
 
 Use OpenSSL for HTTPS banner grabbing:
 ```
 $ openssl s_client -connect target.site:443
 HEAD / HTTP/1.0
-
-
 ```
 
 httprint is a web fingerprinting tool that uses **signature-based** technique
@@ -126,12 +112,14 @@ web server banners.
 $ httprint -P0 -h <target hosts> -s <signature file>
 ```
 
-### Directory and File Enumeration
-- Gobuster
-- Dirbuster
-- Dirb
+## Directory and File Enumeration
 
-### XSS
+Pick your favorite URI Enumeration tool
+- Gobuster - fast, multi-threaded scanner
+- Dirbuster - nice GUI
+- Dirb - recursively scans directories
+
+## XSS
 
 Look to exploit user input coming from:
 - Request headers
@@ -140,63 +128,64 @@ Look to exploit user input coming from:
 - POST parameters
 - GET parameters
 
-Find an XSS attack by entering:
-- <script>alert(1)</script>
-- <i>some text</i>
+Check for XSS
+```
+<script>alert(1)</script>
+<i>some text</i>
+```
 
 Steal cookies:
-- <script>alert(document.cookie)</script>
+```
+<script>alert(document.cookie)</script>
+```
 
-### SQL Injection
+## SQL Injection
+
+Same injection points as XSS. 
 
 Boolean Injection:
 - and 1=1; -- -
 - or 'a'='a'; -- -
 
+Once you determine that a site is vulnerable to SQLi, automate with SQL Map.
 
-Use sqlmap to automate:
 ```
 $ sqlmap -u <url>
-```
-
-Get a list of tables:
-```
+$ sqlmap -u <url> -p <parameter>
 $ sqlmap -u <url> --tables
-```
-
-Dump all data from a given table:
-```
 $ sqlmap -u <url> -D <database name> -T <table name> --dump
 ```
 
-### Windows Shares Enumeration
+## Windows Shares Enumeration
 
+Check what shares are available on a host
+```
+$ smbclient -L //ip 
+$ enum4linux -a ip_address
+```
 
-### SMB Null Attack
+## SMB Null Attack
 Try to login without a username or password:
 
 ```
-$ smbclient //share -N
+$ smbclient //ip/share -N
 ```
 
-## MySQL commands
+## MySQL Database commands
 
 Login to MySQL with password
 ```
 $ mysql --user=root --port=13306 -p -h 172.16.64.81
 ```
 
-Show databases:
 ```
 > SHOW databases;
+> SHOW tables FROM databases;
+> USE database;
+> SELECT * FROM table;
 ```
 
-Select a database to use:
-```
-> USE <database name>;
-```
-
-Change an items value for a given user:
+Change table entry values
 ```
 # Add the user tracking1 to the "adm" group
 > update users set adm="yes" where username="tracking1";
@@ -204,7 +193,8 @@ Change an items value for a given user:
 
 ## Misc
 
-Found a webshell/admin panel on a site?
-- Run phpinfo(); to determine if it is a PHP shell
+- Found a webshell/admin panel on a site?
+	- Run phpinfo(); to determine if it is a PHP shell
 - Try to get a reverse shell connection
-- Check for flag in /home or /var/www
+- Check for flag in the user's home directory
+- Enumerate, enumerate, enumerate
