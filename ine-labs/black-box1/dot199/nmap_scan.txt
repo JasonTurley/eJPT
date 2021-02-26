@@ -1,0 +1,14 @@
+# Nmap 7.91 scan initiated Wed Feb 24 12:18:57 2021 as: nmap -sV --reason -oN nmap_scan.txt 172.16.64.199
+Nmap scan report for 172.16.64.199
+Host is up, received conn-refused (0.070s latency).
+Not shown: 996 closed ports
+Reason: 996 conn-refused
+PORT     STATE SERVICE       REASON  VERSION
+135/tcp  open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds? syn-ack
+1433/tcp open  ms-sql-s      syn-ack Microsoft SQL Server 2014 12.00.2000
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb 24 12:19:30 2021 -- 1 IP address (1 host up) scanned in 33.26 seconds

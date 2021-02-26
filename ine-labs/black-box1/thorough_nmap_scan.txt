@@ -1,0 +1,228 @@
+# Nmap 7.91 scan initiated Wed Feb 24 13:41:35 2021 as: nmap -sV -n -T4 -Pn -p- -A -iL alive_hosts.txt -v --open -oN thorough_nmap_scan.txt
+Nmap scan report for 172.16.64.101
+Host is up (0.074s latency).
+Not shown: 65531 closed ports
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 7f:b7:1c:3d:55:b3:9d:98:58:11:17:ef:cc:af:27:67 (RSA)
+|   256 5f:b9:93:e2:ec:eb:f7:08:e4:bb:82:d0:df:b9:b1:56 (ECDSA)
+|_  256 db:1f:11:ad:59:c1:3f:0c:49:3d:b0:66:10:fa:57:21 (ED25519)
+8080/tcp  open  http    Apache Tomcat/Coyote JSP engine 1.1
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE OPTIONS
+|_  Potentially risky methods: PUT DELETE
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Apache2 Ubuntu Default Page: It works
+9080/tcp  open  http    Apache Tomcat/Coyote JSP engine 1.1
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE OPTIONS
+|_  Potentially risky methods: PUT DELETE
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Apache2 Ubuntu Default Page: It works
+59919/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+MAC Address: 00:50:56:A2:CE:79 (VMware)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/24%OT=22%CT=1%CU=30533%PV=Y%DS=1%DC=D%G=Y%M=005056%T
+OS:M=60369EA7%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10A%TI=Z%CI=I%II=I
+OS:%TS=8)OPS(O1=M4E7ST11NW7%O2=M4E7ST11NW7%O3=M4E7NNT11NW7%O4=M4E7ST11NW7%O
+OS:5=M4E7ST11NW7%O6=M4E7ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6
+OS:=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M4E7NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O
+OS:%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=
+OS:0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%
+OS:S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%CD=S)
+
+Uptime guess: 0.129 days (since Wed Feb 24 10:38:56 2021)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   74.30 ms 172.16.64.101
+
+Nmap scan report for 172.16.64.140
+Host is up (0.081s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: 404 HTML Template by Colorlib
+MAC Address: 00:50:56:A2:ED:B9 (VMware)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/24%OT=80%CT=1%CU=32277%PV=Y%DS=1%DC=D%G=Y%M=005056%T
+OS:M=60369EA7%P=x86_64-pc-linux-gnu)SEQ(SP=F9%GCD=1%ISR=105%TI=Z%CI=I%II=I%
+OS:TS=8)OPS(O1=M4E7ST11NW7%O2=M4E7ST11NW7%O3=M4E7NNT11NW7%O4=M4E7ST11NW7%O5
+OS:=M4E7ST11NW7%O6=M4E7ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=
+OS:7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M4E7NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%
+OS:A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0
+OS:%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S
+OS:=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R
+OS:=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N
+OS:%T=40%CD=S)
+
+Uptime guess: 0.130 days (since Wed Feb 24 10:38:11 2021)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=249 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   81.49 ms 172.16.64.140
+
+Nmap scan report for 172.16.64.182
+Host is up (0.067s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 7f:b7:1c:3d:55:b3:9d:98:58:11:17:ef:cc:af:27:67 (RSA)
+|   256 5f:b9:93:e2:ec:eb:f7:08:e4:bb:82:d0:df:b9:b1:56 (ECDSA)
+|_  256 db:1f:11:ad:59:c1:3f:0c:49:3d:b0:66:10:fa:57:21 (ED25519)
+MAC Address: 00:50:56:A2:10:16 (VMware)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/24%OT=22%CT=1%CU=30201%PV=Y%DS=1%DC=D%G=Y%M=005056%T
+OS:M=60369EA8%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=104%TI=Z%CI=I%II=I
+OS:%TS=8)OPS(O1=M4E7ST11NW7%O2=M4E7ST11NW7%O3=M4E7NNT11NW7%O4=M4E7ST11NW7%O
+OS:5=M4E7ST11NW7%O6=M4E7ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6
+OS:=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M4E7NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O
+OS:%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=
+OS:0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%
+OS:S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%CD=S)
+
+Uptime guess: 0.130 days (since Wed Feb 24 10:37:04 2021)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   67.08 ms 172.16.64.182
+
+Nmap scan report for 172.16.64.199
+Host is up (0.072s latency).
+Not shown: 65523 closed ports
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+1433/tcp  open  ms-sql-s      Microsoft SQL Server 2014 12.00.2000.00; RTM
+| ms-sql-ntlm-info: 
+|   Target_Name: WIN10
+|   NetBIOS_Domain_Name: WIN10
+|   NetBIOS_Computer_Name: WIN10
+|   DNS_Domain_Name: WIN10
+|   DNS_Computer_Name: WIN10
+|_  Product_Version: 10.0.10586
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-02-24T02:21:11
+| Not valid after:  2051-02-24T02:21:11
+| MD5:   dae0 b306 70b0 42a9 60cc 8aa1 51d8 879e
+|_SHA-1: c927 8194 b1bd 732d ec07 3f2d b2d0 6a04 ce01 e77d
+|_ssl-date: 2021-02-24T18:46:09+00:00; +1m15s from scanner time.
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49668/tcp open  msrpc         Microsoft Windows RPC
+49669/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  msrpc         Microsoft Windows RPC
+49943/tcp open  ms-sql-s      Microsoft SQL Server 2014 12.00.2000
+| ms-sql-ntlm-info: 
+|   Target_Name: WIN10
+|   NetBIOS_Domain_Name: WIN10
+|   NetBIOS_Computer_Name: WIN10
+|   DNS_Domain_Name: WIN10
+|   DNS_Computer_Name: WIN10
+|_  Product_Version: 10.0.10586
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-02-24T02:21:11
+| Not valid after:  2051-02-24T02:21:11
+| MD5:   dae0 b306 70b0 42a9 60cc 8aa1 51d8 879e
+|_SHA-1: c927 8194 b1bd 732d ec07 3f2d b2d0 6a04 ce01 e77d
+|_ssl-date: 2021-02-24T18:46:09+00:00; +1m14s from scanner time.
+MAC Address: 00:50:56:A2:AD:96 (VMware)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/24%OT=135%CT=1%CU=30443%PV=Y%DS=1%DC=D%G=Y%M=005056%
+OS:TM=60369EA8%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10C%TI=I%CI=I%II=
+OS:I%SS=S%TS=A)OPS(O1=M4E7NW8ST11%O2=M4E7NW8ST11%O3=M4E7NW8NNT11%O4=M4E7NW8
+OS:ST11%O5=M4E7NW8ST11%O6=M4E7ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2
+OS:000%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M4E7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=
+OS:80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3
+OS:(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%
+OS:F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y
+OS:%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%R
+OS:D=0%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)I
+OS:E(R=Y%DFI=N%T=80%CD=Z)
+
+Uptime guess: 0.134 days (since Wed Feb 24 10:32:02 2021)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1m14s, deviation: 0s, median: 1m13s
+| ms-sql-info: 
+|   172.16.64.199:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2014 RTM
+|       number: 12.00.2000.00
+|       Product: Microsoft SQL Server 2014
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+| nbstat: NetBIOS name: WIN10, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:a2:ad:96 (VMware)
+| Names:
+|   WIN10<00>            Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  WIN10<20>            Flags: <unique><active>
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-02-24T18:46:04
+|_  start_date: 2021-02-24T02:21:09
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   71.66 ms 172.16.64.199
+
+Post-scan script results:
+| ssh-hostkey: Possible duplicate hosts
+| Key 256 db:1f:11:ad:59:c1:3f:0c:49:3d:b0:66:10:fa:57:21 (ED25519) used by:
+|   172.16.64.101
+|   172.16.64.182
+| Key 256 5f:b9:93:e2:ec:eb:f7:08:e4:bb:82:d0:df:b9:b1:56 (ECDSA) used by:
+|   172.16.64.101
+|   172.16.64.182
+| Key 2048 7f:b7:1c:3d:55:b3:9d:98:58:11:17:ef:cc:af:27:67 (RSA) used by:
+|   172.16.64.101
+|_  172.16.64.182
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb 24 13:44:56 2021 -- 4 IP addresses (4 hosts up) scanned in 202.49 seconds

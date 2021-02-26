@@ -1,0 +1,20 @@
+
+=====================================================
+Gobuster v2.0.1              OJ Reeves (@TheColonial)
+=====================================================
+[+] Mode         : dir
+[+] Url/Domain   : http://75ajvxi36vchsv584es1.foocorp.io/
+[+] Threads      : 10
+[+] Wordlist     : /usr/share/wordlists/dirb/common.txt
+[+] Status codes : 200,204,301,302,307,403
+[+] Timeout      : 10s
+=====================================================
+=====================================================
+/.hta (Status: 403)
+/.htaccess (Status: 403)
+/.htpasswd (Status: 403)
+/app (Status: 301)
+/index.html (Status: 200)
+/server-status (Status: 403)
+=====================================================
+=====================================================

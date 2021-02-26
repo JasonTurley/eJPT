@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/1134319/difference-between-a-user-and-a-login-in-sql-server

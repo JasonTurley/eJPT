@@ -1,0 +1,39 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb_scan2.txt
+START_TIME: Wed Feb 24 14:11:27 2021
+URL_BASE: http://172.16.64.140/project/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+AUTHORIZATION: admin:admin
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://172.16.64.140/project/ ----
+==> DIRECTORY: http://172.16.64.140/project/backup/
+==> DIRECTORY: http://172.16.64.140/project/css/
+==> DIRECTORY: http://172.16.64.140/project/images/
++ http://172.16.64.140/project/includes (CODE:403|SIZE:304)
++ http://172.16.64.140/project/index.html (CODE:200|SIZE:6525)
+
+---- Entering directory: http://172.16.64.140/project/backup/ ----
+==> DIRECTORY: http://172.16.64.140/project/backup/backup/
+==> DIRECTORY: http://172.16.64.140/project/backup/css/
+==> DIRECTORY: http://172.16.64.140/project/backup/images/
++ http://172.16.64.140/project/backup/index.html (CODE:200|SIZE:6525)
+==> DIRECTORY: http://172.16.64.140/project/backup/test/
+
+---- Entering directory: http://172.16.64.140/project/css/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.140/project/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.140/project/backup/backup/ ----

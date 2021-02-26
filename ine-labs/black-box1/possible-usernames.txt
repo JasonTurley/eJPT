@@ -1,0 +1,10 @@
+elsadmin
+adminels
+elsuser
+developer
+tomcat
+manager
+root
+admin
+dummy
+nao12023

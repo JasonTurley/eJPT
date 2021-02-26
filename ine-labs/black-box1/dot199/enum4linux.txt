@@ -1,0 +1,31 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Wed Feb 24 12:24:59 2021
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 172.16.64.199
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ===================================================== 
+|    Enumerating Workgroup/Domain on 172.16.64.199    |
+ ===================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ============================================= 
+|    Nbtstat Information for 172.16.64.199    |
+ ============================================= 
+Looking up status of 172.16.64.199
+	WIN10           <00> -         B <ACTIVE>  Workstation Service
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	WIN10           <20> -         B <ACTIVE>  File Server Service
+
+	MAC Address = 00-50-56-A2-AD-96
+
+ ====================================== 
+|    Session Check on 172.16.64.199    |
+ ====================================== 
+[E] Server doesn't allow session using username '', password ''.  Aborting remainder of tests.

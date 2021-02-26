@@ -1,0 +1,2 @@
+Driver={SQL Server};Server=foosql.foo.com;Database=;Uid=fooadmin;Pwd=fooadmin;
+/var/www/html/project/354253425234234/flag.txt

@@ -1,0 +1,75 @@
+----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb_scan.txt
+START_TIME: Wed Feb 24 18:54:17 2021
+URL_BASE: http://172.16.64.81/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://172.16.64.81/ ----
+==> DIRECTORY: http://172.16.64.81/default/
++ http://172.16.64.81/index.html (CODE:200|SIZE:11321)
++ http://172.16.64.81/server-status (CODE:403|SIZE:300)
+==> DIRECTORY: http://172.16.64.81/webapp/
+
+---- Entering directory: http://172.16.64.81/default/ ----
++ http://172.16.64.81/default/index.html (CODE:200|SIZE:11321)
+
+---- Entering directory: http://172.16.64.81/webapp/ ----
+==> DIRECTORY: http://172.16.64.81/webapp/assets/
+==> DIRECTORY: http://172.16.64.81/webapp/css/
+==> DIRECTORY: http://172.16.64.81/webapp/emails/
++ http://172.16.64.81/webapp/favicon.ico (CODE:200|SIZE:300757)
+==> DIRECTORY: http://172.16.64.81/webapp/img/
+==> DIRECTORY: http://172.16.64.81/webapp/includes/
++ http://172.16.64.81/webapp/index.php (CODE:200|SIZE:6359)
+==> DIRECTORY: http://172.16.64.81/webapp/install/
+==> DIRECTORY: http://172.16.64.81/webapp/lang/
++ http://172.16.64.81/webapp/robots.txt (CODE:200|SIZE:206)
+==> DIRECTORY: http://172.16.64.81/webapp/templates/
+==> DIRECTORY: http://172.16.64.81/webapp/upload/
+
+---- Entering directory: http://172.16.64.81/webapp/assets/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.81/webapp/css/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.81/webapp/emails/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.81/webapp/img/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.81/webapp/includes/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.81/webapp/install/ ----
++ http://172.16.64.81/webapp/install/index.php (CODE:200|SIZE:3018)
+
+---- Entering directory: http://172.16.64.81/webapp/lang/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.81/webapp/templates/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://172.16.64.81/webapp/upload/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+-----------------
+END_TIME: Wed Feb 24 19:16:07 2021
+DOWNLOADED: 18448 - FOUND: 7

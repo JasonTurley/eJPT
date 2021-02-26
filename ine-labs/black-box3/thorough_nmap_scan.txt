@@ -1,0 +1,69 @@
+# Nmap 7.91 scan initiated Thu Feb 25 20:05:44 2021 as: nmap -sV -n -T4 -Pn -p- -A -iL alive_hosts.txt -v --open -oN thorough_nmap_scan.txt
+Nmap scan report for 172.16.37.220
+Host is up (0.057s latency).
+Not shown: 59238 closed ports, 6295 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+3307/tcp open  tcpwrapped
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/25%OT=80%CT=1%CU=44103%PV=Y%DS=2%DC=T%G=Y%TM=603849E
+OS:2%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=2%ISR=109%TI=Z%II=I%TS=8)OPS(O1=M
+OS:4E7ST11NW7%O2=M4E7ST11NW7%O3=M4E7NNT11NW7%O4=M4E7ST11NW7%O5=M4E7ST11NW7%
+OS:O6=M4E7ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%
+OS:DF=Y%T=40%W=7210%O=M4E7NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=
+OS:0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+OS:T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%
+OS:RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.002 days (since Thu Feb 25 20:05:06 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   61.21 ms 10.13.37.1
+2   57.49 ms 172.16.37.220
+
+Nmap scan report for 172.16.37.234
+Host is up (0.061s latency).
+Not shown: 57710 closed ports, 7823 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE VERSION
+40121/tcp open  ftp     ProFTPD 1.3.0a
+40180/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/25%OT=40121%CT=1%CU=36035%PV=Y%DS=2%DC=T%G=Y%TM=6038
+OS:49E2%P=x86_64-pc-linux-gnu)SEQ(SP=FF%GCD=1%ISR=10F%TI=Z%II=I%TS=8)OPS(O1
+OS:=M4E7ST11NW7%O2=M4E7ST11NW7%O3=M4E7NNT11NW7%O4=M4E7ST11NW7%O5=M4E7ST11NW
+OS:7%O6=M4E7ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=
+OS:Y%DF=Y%T=40%W=7210%O=M4E7NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%R
+OS:D=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q
+OS:=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=
+OS:G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.002 days (since Thu Feb 25 20:05:06 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Unix
+
+TRACEROUTE (using port 40121/tcp)
+HOP RTT      ADDRESS
+-   Hop 1 is the same as for 172.16.37.220
+2   58.71 ms 172.16.37.234
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 25 20:07:46 2021 -- 3 IP addresses (3 hosts up) scanned in 122.12 seconds
