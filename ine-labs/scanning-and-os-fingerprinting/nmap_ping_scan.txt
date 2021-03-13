@@ -1,0 +1,18 @@
+# Nmap 7.91 scan initiated Wed Feb 17 22:20:54 2021 as: nmap -sn -oN nmap_ping_scan.txt 10.142.111.*
+Nmap scan report for 10.142.111.1
+Host is up (0.056s latency).
+Nmap scan report for 10.142.111.6
+Host is up (0.057s latency).
+Nmap scan report for 10.142.111.48
+Host is up (0.057s latency).
+Nmap scan report for 10.142.111.96
+Host is up (0.056s latency).
+Nmap scan report for 10.142.111.99
+Host is up (0.056s latency).
+Nmap scan report for 10.142.111.100
+Host is up (0.056s latency).
+Nmap scan report for 10.142.111.213
+Host is up (0.060s latency).
+Nmap scan report for 10.142.111.240
+Host is up (0.024s latency).
+# Nmap done at Wed Feb 17 22:20:57 2021 -- 256 IP addresses (8 hosts up) scanned in 3.23 seconds

@@ -1,0 +1,220 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Feb 21 17:22:35 2021
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 192.168.99.162
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ====================================================== 
+|    Enumerating Workgroup/Domain on 192.168.99.162    |
+ ====================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ============================================== 
+|    Nbtstat Information for 192.168.99.162    |
+ ============================================== 
+Looking up status of 192.168.99.162
+	ELS-WINXP       <00> -         B <ACTIVE>  Workstation Service
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	ELS-WINXP       <20> -         B <ACTIVE>  File Server Service
+	WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+	WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+
+	MAC Address = 00-50-56-A0-46-C7
+
+ ======================================= 
+|    Session Check on 192.168.99.162    |
+ ======================================= 
+[+] Server 192.168.99.162 allows sessions using username '', password ''
+
+ ============================================= 
+|    Getting domain SID for 192.168.99.162    |
+ ============================================= 
+Domain Name: WORKGROUP
+Domain Sid: (NULL SID)
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ======================================== 
+|    OS information on 192.168.99.162    |
+ ======================================== 
+[+] Got OS info for 192.168.99.162 from smbclient: 
+[+] Got OS info for 192.168.99.162 from srvinfo:
+	192.168.99.162 Wk Sv NT PtB LMB     
+	platform_id     :	500
+	os version      :	5.1
+	server type     :	0x51003
+
+ =============================== 
+|    Users on 192.168.99.162    |
+ =============================== 
+index: 0x1 RID: 0x1f4 acb: 0x00000210 Account: Administrator	Name: (null)	Desc: Built-in account for administering the computer/domain
+index: 0x2 RID: 0x3eb acb: 0x00000210 Account: eLS	Name: (null)	Desc: (null)
+index: 0x3 RID: 0x3ed acb: 0x00000210 Account: Frank	Name: Frank	Desc: (null)
+index: 0x4 RID: 0x1f5 acb: 0x00000214 Account: Guest	Name: (null)	Desc: Built-in account for guest access to the computer/domain
+index: 0x5 RID: 0x3e8 acb: 0x00000211 Account: HelpAssistant	Name: Remote Desktop Help Assistant Account	Desc: Account for Providing Remote Assistance
+index: 0x6 RID: 0x3ec acb: 0x00000210 Account: netadmin	Name: netadmin	Desc: (null)
+index: 0x7 RID: 0x3ea acb: 0x00000211 Account: SUPPORT_388945a0	Name: CN=Microsoft Corporation,L=Redmond,S=Washington,C=US	Desc: This is a vendor's account for the Help and Support Service
+
+user:[Administrator] rid:[0x1f4]
+user:[eLS] rid:[0x3eb]
+user:[Frank] rid:[0x3ed]
+user:[Guest] rid:[0x1f5]
+user:[HelpAssistant] rid:[0x3e8]
+user:[netadmin] rid:[0x3ec]
+user:[SUPPORT_388945a0] rid:[0x3ea]
+
+ =========================================== 
+|    Share Enumeration on 192.168.99.162    |
+ =========================================== 
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	My Documents    Disk      
+	IPC$            IPC       Remote IPC
+	Frank           Disk      
+	C               Disk      
+	WorkSharing     Disk      
+	FrankDocs       Disk      
+	ADMIN$          Disk      Remote Admin
+	C$              Disk      Default share
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+
+[+] Attempting to map shares on 192.168.99.162
+//192.168.99.162/IPC$	Mapping: OK	Listing: DENIED
+//192.168.99.162/Frank	Mapping: OK	Listing: DENIED
+//192.168.99.162/C	[E] Can't understand response:
+  AUTOEXEC.BAT                        A        0  Thu Feb 12 19:50:47 2015
+  boot.ini                           HS      211  Thu Feb 12 19:46:17 2015
+  CONFIG.SYS                          A        0  Thu Feb 12 19:50:47 2015
+  Documents and Settings              D        0  Wed Feb 18 04:25:58 2015
+  IO.SYS                           AHSR        0  Thu Feb 12 19:50:47 2015
+  MSDOS.SYS                        AHSR        0  Thu Feb 12 19:50:47 2015
+  NTDETECT.COM                     AHSR    47564  Tue Aug  3 13:08:34 2004
+  ntldr                            AHSR   250032  Tue Aug  3 13:29:34 2004
+  pagefile.sys                      AHS 805306368  Sun Feb 21 23:01:08 2021
+  Program Files                      DR        0  Mon Oct  3 12:10:27 2016
+  System Volume Information         DHS        0  Thu Feb 12 19:54:12 2015
+  WINDOWS                             D        0  Mon Oct  3 12:12:49 2016
+
+		785224 blocks of size 4096. 304467 blocks available
+//192.168.99.162/WorkSharing	Mapping: OK, Listing: OK
+//192.168.99.162/FrankDocs	Mapping: OK	Listing: DENIED
+//192.168.99.162/ADMIN$	Mapping: DENIED, Listing: N/A
+//192.168.99.162/C$	Mapping: DENIED, Listing: N/A
+
+ ====================================================== 
+|    Password Policy Information for 192.168.99.162    |
+ ====================================================== 
+
+
+[+] Attaching to 192.168.99.162 using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+	[!] Protocol failed: Cannot request session (Called Name:192.168.99.162)
+
+[+] Trying protocol 445/SMB...
+
+[+] Found domain(s):
+
+	[+] ELS-WINXP
+	[+] Builtin
+
+[+] Password Info for Domain: ELS-WINXP
+
+	[+] Minimum password length: None
+	[+] Password history length: None
+	[+] Maximum password age: 42 days 22 hours 47 minutes 
+	[+] Password Complexity Flags: 000000
+
+		[+] Domain Refuse Password Change: 0
+		[+] Domain Password Store Cleartext: 0
+		[+] Domain Password Lockout Admins: 0
+		[+] Domain Password No Clear Change: 0
+		[+] Domain Password No Anon Change: 0
+		[+] Domain Password Complex: 0
+
+	[+] Minimum password age: None
+	[+] Reset Account Lockout Counter: 30 minutes 
+	[+] Locked Account Duration: 30 minutes 
+	[+] Account Lockout Threshold: None
+	[+] Forced Log off Time: Not Set
+
+
+[+] Retieved partial password policy with rpcclient:
+
+Password Complexity: Disabled
+Minimum Password Length: 0
+
+
+ ================================ 
+|    Groups on 192.168.99.162    |
+ ================================ 
+
+[+] Getting builtin groups:
+group:[Administrators] rid:[0x220]
+group:[Backup Operators] rid:[0x227]
+group:[Guests] rid:[0x222]
+group:[Network Configuration Operators] rid:[0x22c]
+group:[Power Users] rid:[0x223]
+group:[Remote Desktop Users] rid:[0x22b]
+group:[Replicator] rid:[0x228]
+group:[Users] rid:[0x221]
+
+[+] Getting builtin group memberships:
+Group 'Administrators' (RID: 544) has member: ELS-WINXP\Administrator
+Group 'Administrators' (RID: 544) has member: ELS-WINXP\eLS
+Group 'Administrators' (RID: 544) has member: ELS-WINXP\netadmin
+Group 'Users' (RID: 545) has member: NT AUTHORITY\INTERACTIVE
+Group 'Users' (RID: 545) has member: NT AUTHORITY\Authenticated Users
+Group 'Users' (RID: 545) has member: ELS-WINXP\netadmin
+Group 'Users' (RID: 545) has member: ELS-WINXP\Frank
+Group 'Guests' (RID: 546) has member: ELS-WINXP\Guest
+
+[+] Getting local groups:
+group:[HelpServicesGroup] rid:[0x3e9]
+
+[+] Getting local group memberships:
+Group 'HelpServicesGroup' (RID: 1001) has member: ELS-WINXP\SUPPORT_388945a0
+
+[+] Getting domain groups:
+group:[None] rid:[0x201]
+
+[+] Getting domain group memberships:
+Group 'None' (RID: 513) has member: ELS-WINXP\Administrator
+Group 'None' (RID: 513) has member: ELS-WINXP\Guest
+Group 'None' (RID: 513) has member: ELS-WINXP\HelpAssistant
+Group 'None' (RID: 513) has member: ELS-WINXP\SUPPORT_388945a0
+Group 'None' (RID: 513) has member: ELS-WINXP\eLS
+Group 'None' (RID: 513) has member: ELS-WINXP\netadmin
+Group 'None' (RID: 513) has member: ELS-WINXP\Frank
+
+ ========================================================================= 
+|    Users on 192.168.99.162 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ========================================================================= 
+[E] Couldn't get SID: NT_STATUS_ACCESS_DENIED.  RID cycling not possible.
+[I] Found new SID: S-1-5-32
+[I] Found new SID: S-1-5-21-823518204-2025429265-839522115
+[+] Enumerating users using SID S-1-5-21-823518204-2025429265-839522115 and logon username '', password ''
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''
+
+ =============================================== 
+|    Getting printer info for 192.168.99.162    |
+ =============================================== 
+No printers returned.
+
+
+enum4linux complete on Sun Feb 21 17:25:39 2021
+

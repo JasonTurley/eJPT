@@ -1,0 +1,119 @@
+# Nmap 7.91 scan initiated Wed Feb 17 22:24:04 2021 as: nmap -O -sV -iL fping_scan.txt -oN nmap_version_and_os.txt
+Nmap scan report for 10.142.111.1
+Host is up (0.055s latency).
+Not shown: 997 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.4p1 (FreeBSD 20100308; protocol 2.0)
+53/tcp open  domain  dnsmasq 2.55
+80/tcp open  http    lighttpd 1.4.29
+MAC Address: 00:50:56:A0:23:42 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|specialized|media device
+Running (JUST GUESSING): OpenBSD 4.X|3.X|5.X (94%), FreeBSD 7.X|9.X (87%), Comau embedded (86%), Apple Apple TV 5.X (85%)
+OS CPE: cpe:/o:openbsd:openbsd:4.3 cpe:/o:freebsd:freebsd:7.0 cpe:/o:openbsd:openbsd:3 cpe:/o:openbsd:openbsd:4 cpe:/a:apple:apple_tv:5.2.1 cpe:/a:apple:apple_tv:5.3 cpe:/o:freebsd:freebsd:9.1
+Aggressive OS guesses: OpenBSD 4.3 (94%), FreeBSD 7.0-RELEASE (87%), Comau C4G robot control unit (86%), OpenBSD 3.8 - 4.7 (85%), OpenBSD 4.1 (85%), OpenBSD 4.9 - 5.1 (85%), OpenBSD 5.2 (85%), Apple TV 5.2.1 or 5.3 (85%), FreeBSD 9.1-PRERELEASE (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd
+
+Nmap scan report for 10.142.111.6
+Host is up (0.054s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.0p1 Debian 4+deb7u2 (protocol 2.0)
+MAC Address: 00:50:56:A0:27:7E (VMware)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/17%OT=22%CT=1%CU=39056%PV=Y%DS=1%DC=D%G=Y%M=005056%T
+OS:M=602DDDF5%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=10F%TI=Z%CI=I%II=I
+OS:%TS=8)OPS(O1=M4E7ST11NW2%O2=M4E7ST11NW2%O3=M4E7NNT11NW2%O4=M4E7ST11NW2%O
+OS:5=M4E7ST11NW2%O6=M4E7ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6
+OS:=3890)ECN(R=Y%DF=Y%T=40%W=3908%O=M4E7NNSNW2%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O
+OS:%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=
+OS:0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%
+OS:S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.142.111.48
+Host is up (0.056s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Microsoft Windows XP microsoft-ds
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+MAC Address: 00:50:56:A0:57:E5 (VMware)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/17%OT=135%CT=1%CU=39985%PV=Y%DS=1%DC=D%G=Y%M=005056%
+OS:TM=602DDDF5%P=x86_64-pc-linux-gnu)SEQ(SP=FD%GCD=2%ISR=10C%TI=I%CI=I%II=I
+OS:%SS=S%TS=0)OPS(O1=M4E7NW0NNT00NNS%O2=M4E7NW0NNT00NNS%O3=M4E7NW0NNT00%O4=
+OS:M4E7NW0NNT00NNS%O5=M4E7NW0NNT00NNS%O6=M4E7NNT00NNS)WIN(W1=FFFF%W2=FFFF%W
+OS:3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M4E7NW0NNS%CC=
+OS:N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=N%T=80%W=0%S=Z%A=S
+OS:%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=FFFF%S=O%A=S+%F=AS%O=M4E7NW0NNT00NNS
+OS:%RD=0%Q=)T4(R=Y%DF=N%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=80%W=
+OS:0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T
+OS:7(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=B0%UN=
+OS:0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=80%CD=Z)
+
+Network Distance: 1 hop
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Nmap scan report for 10.142.111.96
+Host is up (0.055s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.2.22 ((Debian))
+MAC Address: 00:50:56:A0:1C:4F (VMware)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/17%OT=80%CT=1%CU=40537%PV=Y%DS=1%DC=D%G=Y%M=005056%T
+OS:M=602DDDF5%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=I%II=I
+OS:%TS=8)OPS(O1=M4E7ST11NW2%O2=M4E7ST11NW2%O3=M4E7NNT11NW2%O4=M4E7ST11NW2%O
+OS:5=M4E7ST11NW2%O6=M4E7ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6
+OS:=3890)ECN(R=Y%DF=Y%T=40%W=3908%O=M4E7NNSNW2%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O
+OS:%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=
+OS:0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%
+OS:S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+Nmap scan report for 10.142.111.99
+Host is up (0.056s latency).
+Not shown: 997 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.4p1 (FreeBSD 20100308; protocol 2.0)
+53/tcp open  domain  dnsmasq 2.55
+80/tcp open  http    lighttpd 1.4.29
+MAC Address: 00:50:56:A0:E5:3E (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|specialized|media device
+Running (JUST GUESSING): OpenBSD 4.X|3.X|5.X (94%), Comau embedded (86%), FreeBSD 7.X|9.X (86%), Apple Apple TV 5.X (85%)
+OS CPE: cpe:/o:openbsd:openbsd:4.3 cpe:/o:freebsd:freebsd:7.0 cpe:/o:openbsd:openbsd:3 cpe:/o:openbsd:openbsd:4 cpe:/a:apple:apple_tv:5.2.1 cpe:/a:apple:apple_tv:5.3 cpe:/o:freebsd:freebsd:9.1
+Aggressive OS guesses: OpenBSD 4.3 (94%), Comau C4G robot control unit (86%), FreeBSD 7.0-RELEASE (86%), OpenBSD 3.8 - 4.7 (85%), OpenBSD 4.9 - 5.1 (85%), OpenBSD 5.2 (85%), Apple TV 5.2.1 or 5.3 (85%), FreeBSD 9.1-PRERELEASE (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd
+
+Nmap scan report for 10.142.111.100
+Host is up (0.055s latency).
+All 1000 scanned ports on 10.142.111.100 are closed
+MAC Address: 00:50:56:A0:1C:4F (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 10.142.111.240
+Host is up (0.000058s latency).
+All 1000 scanned ports on 10.142.111.240 are closed
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb 17 22:24:38 2021 -- 7 IP addresses (7 hosts up) scanned in 35.93 seconds

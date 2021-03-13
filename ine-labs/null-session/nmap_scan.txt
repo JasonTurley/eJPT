@@ -1,0 +1,16 @@
+# Nmap 7.91 scan initiated Sun Feb 21 17:08:32 2021 as: nmap -sV -iL alive_hosts.txt -oN nmap_scan.txt
+Nmap scan report for 192.168.99.100
+Host is up (0.00023s latency).
+All 1000 scanned ports on 192.168.99.100 are closed
+
+Nmap scan report for 192.168.99.162
+Host is up (0.058s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE      VERSION
+135/tcp open  msrpc        Microsoft Windows RPC
+139/tcp open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds Microsoft Windows XP microsoft-ds
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 21 17:08:41 2021 -- 2 IP addresses (2 hosts up) scanned in 8.95 seconds

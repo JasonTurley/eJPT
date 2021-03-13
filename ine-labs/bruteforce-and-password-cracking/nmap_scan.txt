@@ -1,0 +1,15 @@
+# Nmap 7.91 scan initiated Sun Feb 21 14:10:57 2021 as: nmap -sV -iL alive_hosts.txt -oN nmap_scan.txt
+Nmap scan report for 192.168.99.22
+Host is up (0.055s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.0p1 Debian 4+deb7u2 (protocol 2.0)
+23/tcp open  telnet  Linux telnetd
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.99.100
+Host is up (0.00018s latency).
+All 1000 scanned ports on 192.168.99.100 are closed
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 21 14:11:07 2021 -- 2 IP addresses (2 hosts up) scanned in 9.88 seconds
