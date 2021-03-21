@@ -18,7 +18,7 @@ scan()
 	echo ""
 
 	echo "++ starting nmap scan ++"
-	sudo nmap -p- -sV -A -Pn -T4 -iL $HOST_FILE -oN $OUT_FILE;
+	sudo nmap -p- -A -T4 -iL $HOST_FILE -oN $OUT_FILE;
 }
 
 if [ -z "$TARGET" ]; then
